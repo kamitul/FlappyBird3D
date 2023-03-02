@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  m_GroupName: Default
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9d723f309d85a2943a170da9ec12e21a
+  m_SerializeEntries:
+  - m_GUID: 608be622c701ff34689a6f239517a3d4
+    m_Address: InputConfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - config
+  - m_GUID: 754f78e454dba644182510e619a363f5
+    m_Address: PlayerConfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - config
+  - m_GUID: fa442f8ae1c4b3b42826192abd9117d5
+    m_Address: PlayerData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - config
+  - m_GUID: 3aa704eba9356154a8002efe3859c6f3
+    m_Address: PrefabsConfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - config
+  - m_GUID: 430b56a7580354047b52a49d3fb2030c
+    m_Address: SaveConfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - config
+  - m_GUID: 853e06531c85c814485b2f2996800538
+    m_Address: UIConfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - config
+  - m_GUID: 541f0e15beb0d5046a67edac31b3370a
+    m_Address: MapConfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - config
+  - m_GUID: f8ab6201cb151fc44a9651c1b724b256
+    m_Address: CameraConfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - config
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2ae9bdcf662cf2144b8508e268c35a95, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9c82152527764a647a1d5972084d05fc, type: 2}
+    - {fileID: 11400000, guid: 52b7e9b23f4fa754697877feba91a1a9, type: 2}

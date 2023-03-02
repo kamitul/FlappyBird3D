@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7868a5347307fcb46a3c24daf6280b12, type: 3}
+  m_Name: PrefabsConfig
+  m_EditorClassIdentifier: 
+  <Tiles>k__BackingField:
+  - {fileID: -5816893017362738799, guid: 513206abc7eb8a94b8d632d3e59105ab, type: 3}
+  - {fileID: -1306944277267322890, guid: af2f11c1167e8584e8beaa56d7464ea5, type: 3}
+  - {fileID: 746846067750403614, guid: 0665fba9c21092f46b04e774f738478a, type: 3}
+  - {fileID: 8486747170397129995, guid: 27d3a66251f80cf4c8df26dea636b96d, type: 3}
+  - {fileID: -8111852159306107073, guid: 613dc68909a17334dba324bf60f02ec6, type: 3}
+  - {fileID: 7650491433702314014, guid: 749c24da04b1c4a40a289bf1740bcb9c, type: 3}
+  - {fileID: 9001799726658193904, guid: 0e5f530a5289fac47ab2f8ee5063252e, type: 3}
+  - {fileID: 2685429634420319143, guid: c7f3a361811b70246860664f7716e9f0, type: 3}
+  - {fileID: 7566745550842481980, guid: 05561ed6d59c1f343acdfe18546c08b2, type: 3}
+  - {fileID: -8134107635280159466, guid: ce70b86b3debf3948b4a9c6e568d660a, type: 3}
+  <Obstacles>k__BackingField:
+  - {fileID: 8388235113763449715, guid: 5bdb81b08e5a7a045ab942e2424ec422, type: 3}
+  - {fileID: -2226767796779863610, guid: eb171ba426f644e428e38e84a84db339, type: 3}
+  - {fileID: 5488900099175253451, guid: 544eb1c15733a7c4bb1c75bcc6539c79, type: 3}
+  - {fileID: 2860693134983075869, guid: 82d30ef1ee1e4bd42a18bc8700967e03, type: 3}
+  - {fileID: -700535010629904675, guid: 3fea396b479e2694a83081b1ba24abaf, type: 3}
+  - {fileID: 2775556598636972795, guid: ea25207a31e43fa4e83e0974804c2966, type: 3}
+  - {fileID: 3578829614424363269, guid: 595df9719093e294aa922ca4eca44e18, type: 3}
+  - {fileID: 9098971381498947271, guid: b8ebdfd1dc51d154a9891df3a38f172c, type: 3}
+  - {fileID: 6732615269408076925, guid: 408884395117d184b870cf1c9e074294, type: 3}
+  - {fileID: -3851433465195530146, guid: 8c1c36f5944a6b642a205b71b93edf90, type: 3}
+  <PlayerPrefab>k__BackingField: {fileID: 2133706976542438055, guid: 0a617b811b7209e499c8f50fd8069135, type: 3}
+  MAX_VISIBILE_TILES: 5

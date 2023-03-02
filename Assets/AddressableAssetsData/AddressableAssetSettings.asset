@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: 9d723f309d85a2943a170da9ec12e21a
+  m_CachedHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_OptimizeCatalogSize: 0
+  m_BuildRemoteCatalog: 1
+  m_BundleLocalCatalog: 0
+  m_CatalogRequestsTimeout: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_IgnoreUnsupportedFilesInBuild: 0
+  m_UniqueBundleIds: 0
+  m_NonRecursiveBuilding: 1
+  m_CCDEnabled: 0
+  m_maxConcurrentWebRequests: 500
+  m_ContiguousBundles: 1
+  m_StripUnityVersionFromBundleBuild: 0
+  m_DisableVisibleSubAssetRepresentations: 0
+  m_ShaderBundleNaming: 0
+  m_ShaderBundleCustomNaming: 
+  m_MonoScriptBundleNaming: 0
+  m_MonoScriptBundleCustomNaming: 
+  m_RemoteCatalogBuildPath:
+    m_Id: 596b43fb395baac479596d9dcb48e81d
+  m_RemoteCatalogLoadPath:
+    m_Id: 33514853eb779f44187ce7090db13e95
+  m_ContentStateBuildPath: 
+  m_BuildAddressablesWithPlayerBuild: 0
+  m_overridePlayerVersion: 
+  m_GroupAssets:
+  - {fileID: 11400000, guid: fc57f86b22dd88b4fbb013693933c835, type: 2}
+  - {fileID: 11400000, guid: 5dc96fc0f2f54dc4baea69d2a8c6af42, type: 2}
+  - {fileID: 11400000, guid: bec82c0704b1ee748a592dc5425e4ba9, type: 2}
+  - {fileID: 11400000, guid: 373af150e83fa774b8af99bd0d60c098, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: 034be3cc8b51be34987f6ee69b7b7100
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: 29445ae7f59edb941b5ef4dba6850e35
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: e04db5d5e39521049858870b61207731
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 0ce5d75d7fc63c0488cfac3760d97136
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 596b43fb395baac479596d9dcb48e81d
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 33514853eb779f44187ce7090db13e95
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+    - m_InheritedParent: 
+      m_Id: 75e0987e0aaa4594ab445df53fc4a7fb
+      m_ProfileName: Google
+      m_Values:
+      - m_Id: 29445ae7f59edb941b5ef4dba6850e35
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: e04db5d5e39521049858870b61207731
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 0ce5d75d7fc63c0488cfac3760d97136
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 596b43fb395baac479596d9dcb48e81d
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 33514853eb779f44187ce7090db13e95
+        m_Value: https://storage.googleapis.com/flappybird-addressables/[BuildTarget]
+    m_ProfileEntryNames:
+    - m_Id: 29445ae7f59edb941b5ef4dba6850e35
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    - m_Id: e04db5d5e39521049858870b61207731
+      m_Name: Local.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 0ce5d75d7fc63c0488cfac3760d97136
+      m_Name: Local.LoadPath
+      m_InlineUsage: 0
+    - m_Id: 596b43fb395baac479596d9dcb48e81d
+      m_Name: Remote.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 33514853eb779f44187ce7090db13e95
+      m_Name: Remote.LoadPath
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+    - config
+    - tile
+    - obstacle
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: 7c1decf977d3fd1429bb3a1e9bd2e167, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: 0919bbb2d813e4f49b359185f87ff655, type: 2}
+  - {fileID: 11400000, guid: 8169203f182931d4287d864dd04a71fb, type: 2}
+  - {fileID: 11400000, guid: 24bdbfb9a982062438785b7833fe7b11, type: 2}
+  - {fileID: 11400000, guid: 2979864e6d71ea641afb1e5ee04ef9ec, type: 2}
+  m_ActiveProfileId: 75e0987e0aaa4594ab445df53fc4a7fb
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []

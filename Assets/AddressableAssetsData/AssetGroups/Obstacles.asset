@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Obstacles
+  m_EditorClassIdentifier: 
+  m_GroupName: Obstacles
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f62fdbb064de84147b1f139f229741d3
+  m_SerializeEntries:
+  - m_GUID: 5bdb81b08e5a7a045ab942e2424ec422
+    m_Address: Obstacle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: eb171ba426f644e428e38e84a84db339
+    m_Address: Obstacle1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: 544eb1c15733a7c4bb1c75bcc6539c79
+    m_Address: Obstacle2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: 82d30ef1ee1e4bd42a18bc8700967e03
+    m_Address: Obstacle3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: 3fea396b479e2694a83081b1ba24abaf
+    m_Address: Obstacle4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: ea25207a31e43fa4e83e0974804c2966
+    m_Address: Obstacle5
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: 595df9719093e294aa922ca4eca44e18
+    m_Address: Obstacle6
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: b8ebdfd1dc51d154a9891df3a38f172c
+    m_Address: Obstacle7
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: 408884395117d184b870cf1c9e074294
+    m_Address: Obstacle8
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: 8c1c36f5944a6b642a205b71b93edf90
+    m_Address: Obstacle9
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  - m_GUID: b7f7778ee980ea74982888d01ab4ae90
+    m_Address: Obstacle10
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - obstacle
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2ae9bdcf662cf2144b8508e268c35a95, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5a4aefb6ce8edf549a26c95f8342a707, type: 2}
+    - {fileID: 11400000, guid: 5c0ecbf18e309b84bb4a5af9a4133bce, type: 2}
