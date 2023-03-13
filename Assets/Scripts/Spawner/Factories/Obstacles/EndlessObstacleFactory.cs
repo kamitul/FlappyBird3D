@@ -18,6 +18,7 @@ namespace Spawner.Factories.Obstacles
         {
             int random = Random.Range(0, payload.ObstaclePools.Length);
             var obj = payload.ObstaclePools[random].GetObject(true);
+            if (obj == null) return null;
 
             Vector3 newPos = obj.IsRandomizable ? RandomizePosition(tile) : tile.GetPosition();
             obj.Initialize(newPos);

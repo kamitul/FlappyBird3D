@@ -19,6 +19,8 @@ namespace Spawner.Factories.Tiles
         {
             int random = Random.Range(0, payload.TilePools.Length);
             var obj = payload.TilePools[random].GetObject(true);
+            if (obj == null) return null;
+
             var newPos = Vector3.zero + new Vector3((multiplierXPosition++ * obj.Bounds.extents.x * 2), 0, 0);
             obj.SetPosition(newPos);
             return obj;

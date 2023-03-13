@@ -13,7 +13,7 @@ using Services.Save;
 
 namespace UI.Contexts
 {
-    public class DeathContext : Context
+    public class DeathContext : Context, IObserver<PlayerData>
     {
         [SerializeField] private Button exitMenuButton;
         [SerializeField] private TextMeshProUGUI scoreText;
@@ -22,11 +22,6 @@ namespace UI.Contexts
         private PlayerData data;
 
         public override ContextIdentifier Identifier => ContextIdentifier.Death;
-
-        private void Awake()
-        {
-            data = Configuration.GetConfig<PlayerData>();
-        }
 
         private void OnEnable()
         {
@@ -68,6 +63,21 @@ namespace UI.Contexts
         private void OnMenuOpened()
         {
             controller.Open(ContextIdentifier.Menu);
+        }
+
+        public void OnCompleted()
+        {
+            
+        }
+
+        public void OnError(Exception error)
+        {
+            
+        }
+
+        public void OnNext(PlayerData value)
+        {
+            data = value;
         }
     }
 }

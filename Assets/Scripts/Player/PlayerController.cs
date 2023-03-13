@@ -22,10 +22,10 @@ namespace Player
         private PlayerMovementController movementController;
         private PlayerConfig playerConfig;
         private CameraConfig cameraConfig;
-        private PlayerData data;
 
         public event Action OnPlayerDeath;
         public event Action OnPlayerFly;
+
 
         public override Dictionary<State, State<State>> Initalize()
         {
@@ -44,7 +44,6 @@ namespace Player
             movementController = GetComponent<PlayerMovementController>();
             playerConfig = Configuration.GetConfig<PlayerConfig>();
             cameraConfig = Configuration.GetConfig<CameraConfig>();
-            data = Configuration.GetConfig<PlayerData>();
         }
 
         private void Start()
@@ -68,7 +67,6 @@ namespace Player
 
         public void Reset()
         {
-            data.Reset();
             movementController.Reset();
         }
 

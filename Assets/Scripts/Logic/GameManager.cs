@@ -19,17 +19,17 @@ namespace Logic
         private PointsController pointsController;
         private TileController tileController;
 
-        private PrefabsConfig prefabsConfig;
-        private IDisposable disposable;
+        private IDisposable[] disposables;
 
         protected override void Awake()
         {
             base.Awake();
-            prefabsConfig = Configuration.GetConfig<PrefabsConfig>();
+            pointsController = new PointsController();
             uiController.Initialize();
 
-            pointsController = new PointsController();
-            disposable = pointsController.Subscribe(uiController.GetHUD());
+            disposables = new IDisposable[2];
+            disposables[0] = pointsController.Subscribe(uiController.GetHUD());
+            disposables[0] = pointsController.Subscribe(uiController.GetDeathContext());
         }
 
         public void InitializeUI()
@@ -39,6 +39,7 @@ namespace Logic
 
         private void Start()
         {
+            var prefabsConfig = Configuration.GetConfig<PrefabsConfig>();
             playerController = Instantiate(prefabsConfig.PlayerPrefab);
             playerController.Disable();
             mapController.Subscribe(new AcceleratorController(playerController));
@@ -67,6 +68,7 @@ namespace Logic
 
         private void OnPlayerDeath()
         {
+            pointsController.Reset();
             pointsController.Stop();
             uiController.Open(ContextIdentifier.Death);
         }
@@ -78,7 +80,9 @@ namespace Logic
                 playerController.OnPlayerDeath -= OnPlayerDeath;
                 playerController.OnPlayerFly -= OnPlayerFly;
             }
-            disposable?.Dispose();
+
+            foreach(var disposable in disposables)
+                disposable?.Dispose();
         }
 
         private void Update()

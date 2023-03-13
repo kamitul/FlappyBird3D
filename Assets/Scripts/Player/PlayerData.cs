@@ -2,10 +2,9 @@ using UnityEngine;
 
 namespace Player
 {
-    [CreateAssetMenu(fileName = nameof(PlayerData), menuName = "Player/Data")]
-    public class PlayerData : ScriptableObject
+    public struct PlayerData
     {
-        public float Score { get; set; } = 0f;
+        public float Score;
 
         public void Update()
         {

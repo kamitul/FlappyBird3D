@@ -1,12 +1,19 @@
-﻿namespace Loader
+﻿using System;
+
+namespace Loader
 {
-    public class LoaderData
+    public struct LoaderData
     {
+        public float Progress;
+
         public LoaderData(float progress)
         {
             Progress = progress;
         }
 
-        public float Progress { get; set; }
+        public void Update(float value)
+        {
+            Progress = value;
+        }
     }
 }

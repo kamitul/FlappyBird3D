@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 namespace Pooling
@@ -7,65 +7,55 @@ namespace Pooling
         where T : MonoBehaviour, IPoolable
     {
         private readonly Transform parentTransform;
-        private readonly T pooledPrefab;
-        private readonly List<T> pooledObjects = new List<T>();
+        private readonly T[] pooledObjects;
 
         public Pool(T pooledObj, int initialPoolSize, Transform parent)
         {
             parentTransform = parent;
-            pooledObjects = new List<T>();
+            pooledObjects = new T[initialPoolSize];
 
             for (int i = 0; i < initialPoolSize; i++)
             {
-                SpawnObj(pooledObj);
+                SpawnObj(pooledObj, i);
             }
-            pooledPrefab = pooledObj;
         }
 
-        private void SpawnObj(T pooledObj)
+        private void SpawnObj(T pooledObj, int index)
         {
-            var nObj = Object.Instantiate(pooledObj.gameObject, Vector3.zero, Quaternion.identity, parentTransform);
+            var nObj = UnityEngine.Object.Instantiate(pooledObj.gameObject, Vector3.zero, Quaternion.identity, parentTransform);
             nObj.SetActive(false);
-            pooledObjects.Add(nObj.GetComponent<T>());
+            pooledObjects[index] = nObj.GetComponent<T>();
         }
 
         public T GetObject(bool shouldActivateObject)
         {
-            var pooledObject = pooledObjects.Find(x => x.IsTaken == false);
+            var pooledObject = Array.Find(pooledObjects, x => x.IsTaken == false);
 
             if (pooledObject == null)
             {
-                GrowPool(pooledObjects.Count);
-                pooledObject = pooledObjects.Find(x => x.IsTaken == false);
+                Debug.LogError("There is no not taken object!");
+                return null;
             }
 
-            if (shouldActivateObject) pooledObject.gameObject.SetActive(true);
+            pooledObject.gameObject.SetActive(shouldActivateObject);
             pooledObject.Acquire();
             return pooledObject;
         }
 
-        private void GrowPool(int count)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                SpawnObj(pooledPrefab);
-            }
-        }
-
         public void DisableAllObjects()
         {
-            pooledObjects.ForEach(item =>
+            for(int i = 0; i < pooledObjects.Length; ++i)
             {
-                item.Release();
-                item.gameObject.SetActive(false);
-                item.transform.SetParent(parentTransform);
-            });
+                pooledObjects[i].Release();
+                pooledObjects[i].gameObject.SetActive(false);
+                pooledObjects[i].transform.SetParent(parentTransform);
+            }
         }
 
         public void ClearObjects()
         {
-            pooledObjects.ForEach(x => Object.Destroy(x.gameObject));
-            pooledObjects.Clear();
+            for (int i = 0; i < pooledObjects.Length; ++i)
+                UnityEngine.Object.Destroy(pooledObjects[i].gameObject);
         }
     }
 }

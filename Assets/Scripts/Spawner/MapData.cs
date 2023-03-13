@@ -1,8 +1,8 @@
 ﻿namespace Spawner
 {
-    public class MapData
+    public struct MapData
     {
-        public int ObstaclesPassed { get; private set; }
+        public int ObstaclesPassed;
 
         public MapData(int obstaclesPassed)
         {

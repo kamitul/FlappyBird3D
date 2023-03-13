@@ -4,11 +4,11 @@ using Utils;
 
 namespace Loader
 {
-
     public class LoaderController : IObservable<LoaderData>
     {
+        private LoaderData data;
+
         private readonly List<IObserver<LoaderData>> observers;
-        private readonly LoaderData data;
 
         public LoaderController()
         {
@@ -18,8 +18,8 @@ namespace Loader
 
         public void UpdateProgress(float value)
         {
-            data.Progress = value;
-            Notify(data);
+            data.Update(value);
+            Notify(in data);
         }
 
         public IDisposable Subscribe(IObserver<LoaderData> observer)
@@ -29,7 +29,7 @@ namespace Loader
             return new Disposer<LoaderData>(observers, observer);
         }
 
-        private void Notify(LoaderData data)
+        private void Notify(in LoaderData data)
         {
             foreach (var observer in observers)
                 observer.OnNext(data);

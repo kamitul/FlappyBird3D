@@ -13,6 +13,7 @@ namespace UI
             new Dictionary<ContextIdentifier, Context>();
 
         public HUDContext GetHUD() => spawnedContext[ContextIdentifier.HUD] as HUDContext;
+        public DeathContext GetDeathContext() => spawnedContext[ContextIdentifier.Death] as DeathContext;
 
         public void Initialize()
         {

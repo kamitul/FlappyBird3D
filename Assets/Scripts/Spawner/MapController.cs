@@ -39,8 +39,9 @@ namespace Spawner
             var tiles = GameServices.GetService<AssetService>().GetTiles();
             var obstacles = GameServices.GetService<AssetService>().GetObstacles();
 
-            tileFactory = new EndlessTileFactory(new EndlessTileFactory.Payload(tiles.Select(x => new Pool<Tile>(x, 1, transform)).ToArray()));
-            obstacleFactory = new EndlessObstacleFactory(new EndlessObstacleFactory.Payload(obstacles.Select(x => new Pool<Obstacle>(x, 3, transform)).ToArray(), mapConfig.ZLines));
+            tileFactory = new EndlessTileFactory(new EndlessTileFactory.Payload(tiles.Select(x => new Pool<Tile>(x, mapConfig.MAX_VISIBILE_TILES, transform)).ToArray()));
+            obstacleFactory = new EndlessObstacleFactory(new EndlessObstacleFactory.Payload(obstacles.Select(x => new Pool<Obstacle>(x,
+                mapConfig.MAX_VISIBILE_TILES * mapConfig.MAX_OBSTACLES, transform)).ToArray(), mapConfig.ZLines));
         }
 
         private void Subscribe(ITile tile)
@@ -52,7 +53,7 @@ namespace Spawner
         private void OnObstaclePassed(IObstacle obj)
         {
             data.Increment();
-            Notify(data);
+            Notify(in data);
         }
 
         private void OnTilePassed(ITile tile)
@@ -64,12 +65,17 @@ namespace Spawner
         private void SpawnTile()
         {
             var newTile = tileFactory.Create();
+            if (newTile == null) return;
+
             List<IObstacle> obstacles = new List<IObstacle>();
             var count = UnityEngine.Random.Range(1, mapConfig.MAX_OBSTACLES + 1);
 
             for(int i = 0; i < count; ++i)
             {
-                obstacles.Add(obstacleFactory.Create(newTile));
+                var obstacle = obstacleFactory.Create(newTile);
+                if (obstacle == null) return;
+
+                obstacles.Add(obstacle);
             }
             newTile.SetObstacles(obstacles);
 
@@ -96,7 +102,7 @@ namespace Spawner
             return new Disposer<MapData>(observers, observer);
         }
 
-        private void Notify(MapData data)
+        private void Notify(in MapData data)
         {
             foreach (var observer in observers)
                 observer.OnNext(data);
