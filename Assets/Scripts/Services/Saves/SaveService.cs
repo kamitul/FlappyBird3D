@@ -6,7 +6,7 @@ using System.Threading;
 using UnityEngine;
 using static Config.SaveConfig;
 
-namespace Services.Save
+namespace Services.Saves
 {
     public class SaveService : IService
     {

@@ -56,6 +56,8 @@ namespace Logic
 
             bootstrapUI.Close();
             disposable?.Dispose();
+
+            Destroy(gameObject);
         }
     }
 }

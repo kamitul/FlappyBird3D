@@ -1,7 +1,7 @@
 using Config;
 using Logic;
 using Services.Models;
-using Services.Save;
+using Services.Saves;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UI.Highscore;

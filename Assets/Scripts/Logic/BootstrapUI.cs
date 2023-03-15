@@ -31,7 +31,7 @@ namespace Logic
 
         public void Close()
         {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }
