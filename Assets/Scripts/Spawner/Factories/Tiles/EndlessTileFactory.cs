@@ -4,7 +4,7 @@ using Map;
 
 namespace Spawner.Factories.Tiles
 {
-    public class EndlessTileFactory : ITileFactory
+    public sealed class EndlessTileFactory : ITileFactory
     {
         private readonly Payload payload;
 

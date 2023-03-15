@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace Player
 {
-    public class AcceleratorController : IObserver<MapData>
+    public sealed class PlayerAcceleratorController : IObserver<MapData>
     {
         private readonly PlayerController playerController;
         private readonly MapConfig mapConfig;
 
-        public AcceleratorController(PlayerController playerController)
+        public PlayerAcceleratorController(PlayerController playerController)
         {
             this.playerController = playerController;
             mapConfig = Configuration.GetConfig<MapConfig>();

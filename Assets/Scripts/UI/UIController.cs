@@ -6,7 +6,7 @@ using UnityEngine;
 namespace UI
 {
     [DisallowMultipleComponent()]
-    public class UIController : MonoBehaviour
+    public sealed class UIController : MonoBehaviour
     {
         private Context currentContext;
         private readonly Dictionary<ContextIdentifier, Context> spawnedContext = 

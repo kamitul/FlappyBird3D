@@ -5,7 +5,7 @@ using Spawner.Factories.Tiles;
 
 namespace Spawner.Factories.Obstacles
 {
-    public class EndlessObstacleFactory : IObstacleFactory
+    public sealed class EndlessObstacleFactory : IObstacleFactory
     {
         private readonly Payload payload;
 

@@ -2,7 +2,7 @@
 
 namespace Player.Movement.Commands
 {
-    public class Push : Command<Push.Payload>
+    public sealed class Push : Command<Push.Payload>
     {
         private readonly float beginSpeed;
 

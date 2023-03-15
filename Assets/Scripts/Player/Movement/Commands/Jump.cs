@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Player.Movement.Commands
 {
-    public class Jump : Command<Jump.Payload>
+    public sealed class Jump : Command<Jump.Payload>
     {
         public Jump(Payload payload) : base(payload) { }
 

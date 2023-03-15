@@ -27,18 +27,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - config
-  - m_GUID: fa442f8ae1c4b3b42826192abd9117d5
-    m_Address: PlayerData
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - config
   - m_GUID: 3aa704eba9356154a8002efe3859c6f3
     m_Address: PrefabsConfig
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - config
-  - m_GUID: 430b56a7580354047b52a49d3fb2030c
-    m_Address: SaveConfig
     m_ReadOnly: 0
     m_SerializedLabels:
     - config

@@ -4,7 +4,7 @@ using Utils;
 
 namespace Player
 {
-    public class PointsController : IObservable<PlayerData>
+    public sealed class PointsController : IObservable<PlayerData>
     {
         private PlayerData data;
         private bool isCalculating;

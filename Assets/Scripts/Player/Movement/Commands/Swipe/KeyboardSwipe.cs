@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace Player.Movement.Commands.Swipe
 {
-    public class KeyboardSwipe : Command<KeyboardSwipe.Payload>, ISwipe
+    public sealed class KeyboardSwipe : Command<KeyboardSwipe.Payload>, ISwipe
     {
         public KeyboardSwipe(Payload payload) : base(payload) { }
 

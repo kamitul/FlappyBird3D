@@ -4,11 +4,10 @@ using System;
 using System.IO;
 using System.Threading;
 using UnityEngine;
-using static Config.SaveConfig;
 
 namespace Services.Saves
 {
-    public class SaveService : IService
+    public sealed class SaveService : IService
     {
         private readonly string SAVE_DIR_PATH = Application.persistentDataPath;
 

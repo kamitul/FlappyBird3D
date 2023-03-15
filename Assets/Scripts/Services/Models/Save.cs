@@ -2,7 +2,7 @@
 
 namespace Services.Models
 {
-    public class SaveEntity
+    public sealed class SaveEntity
     {
         public SaveEntity(string date, float score)
         {

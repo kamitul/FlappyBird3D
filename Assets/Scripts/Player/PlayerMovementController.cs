@@ -9,7 +9,7 @@ namespace Player
 {
     [DisallowMultipleComponent()]
     [RequireComponent(typeof(Rigidbody))]
-    public class PlayerMovementController : MonoBehaviour
+    public sealed class PlayerMovementController : MonoBehaviour
     {
         private Rigidbody rgy;
         private InputConfig inputConfig;
@@ -88,7 +88,8 @@ namespace Player
 
         private void OnDestroy()
         {
-            if (swipe is IDisposable disposable) disposable.Dispose();
+            if (swipe is IDisposable disposable) 
+                disposable.Dispose();
         }
     }
 }

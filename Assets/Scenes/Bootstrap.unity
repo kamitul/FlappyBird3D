@@ -281,6 +281,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5899368037975316836, guid: 241dbf011866cee4397d579d40144dcd, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8517387481382367145, guid: 241dbf011866cee4397d579d40144dcd, type: 3}
       propertyPath: m_Pivot.x
       value: 0

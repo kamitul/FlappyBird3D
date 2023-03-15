@@ -11,23 +11,23 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Services.Assets
 {
-    public class OnlineAssetService : AssetService, IDisposable
+    public sealed class OnlineAssetService : IAssetService, IDisposable
     {
         private List<Tile> tiles;
         private List<Obstacle> obstacles;
         private readonly List<AsyncOperationHandle> handlers = new List<AsyncOperationHandle>();
 
-        public override async UniTask Download()
+        public async UniTask Download()
         {
             await UniTask.WhenAll(DownloadTiles(), DownloadObstacles());
         }
 
-        public override List<Tile> GetTiles()
+        public List<Tile> GetTiles()
         {
             return tiles;
         }
 
-        public override List<Obstacle> GetObstacles()
+        public List<Obstacle> GetObstacles()
         {
             return obstacles;
         }

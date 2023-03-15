@@ -4,7 +4,7 @@ using Utils;
 
 namespace Loader
 {
-    public class LoaderController : IObservable<LoaderData>
+    public sealed class LoaderController : IObservable<LoaderData>
     {
         private LoaderData data;
 

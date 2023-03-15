@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Config
 {
     [CreateAssetMenu(fileName = nameof(UIConfig), menuName = "UI/Config")]
-    public class UIConfig : ScriptableObject
+    public sealed class UIConfig : ScriptableObject
     {
         [field: SerializeField] public List<Context> Contexts { get; private set; }
         [field: SerializeField] public Toast Toast { get; private set; }

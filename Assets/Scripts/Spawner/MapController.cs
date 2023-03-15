@@ -15,7 +15,7 @@ using Spawner.Factories.Obstacles;
 namespace Spawner
 {
     [DisallowMultipleComponent()]
-    public class MapController : MonoBehaviour, IObservable<MapData>
+    public sealed class MapController : MonoBehaviour, IObservable<MapData>
     {
         private ITileFactory tileFactory;
         private IObstacleFactory obstacleFactory;
@@ -36,8 +36,8 @@ namespace Spawner
         public void Initialize()
         {
             mapConfig = Configuration.GetConfig<MapConfig>();
-            var tiles = GameServices.GetService<AssetService>().GetTiles();
-            var obstacles = GameServices.GetService<AssetService>().GetObstacles();
+            var tiles = GameServices.GetService<OnlineAssetService>().GetTiles();
+            var obstacles = GameServices.GetService<OnlineAssetService>().GetObstacles();
 
             tileFactory = new EndlessTileFactory(new EndlessTileFactory.Payload(tiles.Select(x => new Pool<Tile>(x, mapConfig.MAX_VISIBILE_TILES, transform)).ToArray()));
             obstacleFactory = new EndlessObstacleFactory(new EndlessObstacleFactory.Payload(obstacles.Select(x => new Pool<Obstacle>(x,

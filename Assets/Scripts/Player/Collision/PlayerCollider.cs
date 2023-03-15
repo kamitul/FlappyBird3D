@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Player.Collision
 {
     [RequireComponent(typeof(Collider))]
-    public class PlayerCollider : MonoBehaviour
+    public sealed class PlayerCollider : MonoBehaviour
     {
         public Action<PlayerController> OnCollided;
 

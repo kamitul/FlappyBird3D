@@ -4,7 +4,7 @@ namespace Player
 {
     [DisallowMultipleComponent()]
     [RequireComponent(typeof(Animator))]
-    public class PlayerAnimationController : MonoBehaviour
+    public sealed class PlayerAnimationController : MonoBehaviour
     {
         private Animator animator;
 

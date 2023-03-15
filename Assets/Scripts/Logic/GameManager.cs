@@ -10,7 +10,7 @@ using Utils;
 
 namespace Logic
 {
-    public class GameManager : Singleton<GameManager>
+    public sealed class GameManager : Singleton<GameManager>
     {
         [SerializeField] private MapController mapController;
         [SerializeField] private UIController uiController;
@@ -42,7 +42,7 @@ namespace Logic
             var prefabsConfig = Configuration.GetConfig<PrefabsConfig>();
             playerController = Instantiate(prefabsConfig.PlayerPrefab);
             playerController.Disable();
-            mapController.Subscribe(new AcceleratorController(playerController));
+            mapController.Subscribe(new PlayerAcceleratorController(playerController));
             mapController.Initialize();
             tileController = new TileController(new TileController.Payload(playerController, mapController));
         }

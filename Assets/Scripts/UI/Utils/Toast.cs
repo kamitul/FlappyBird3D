@@ -5,7 +5,7 @@ using UnityEngine;
 namespace UI.Utils
 {
     [DisallowMultipleComponent()]
-    public class Toast : MonoBehaviour
+    public sealed class Toast : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI infoText;
         [SerializeField] private RectTransform panel;

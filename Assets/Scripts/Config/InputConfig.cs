@@ -4,13 +4,13 @@ using UnityEngine.InputSystem;
 namespace Config
 {
     [CreateAssetMenu(fileName = nameof(InputConfig), menuName = "Input/Config")]
-    public class InputConfig : ScriptableObject
+    public sealed class InputConfig : ScriptableObject
     {
-        [field: SerializeField] public InputActionAsset Asset { get; set; }
-        [field: SerializeField] public InputActionReference Jump { get; set; }
-        [field: SerializeField] public InputActionReference Direction { get; set; }
-        [field: SerializeField] public InputActionReference Contact { get; set; }
-        [field: SerializeField] public InputActionReference Position { get; set; }
+        [field: SerializeField] public InputActionAsset Asset { get; private set; }
+        [field: SerializeField] public InputActionReference Jump { get; private set; }
+        [field: SerializeField] public InputActionReference Direction { get; private set; }
+        [field: SerializeField] public InputActionReference Contact { get; private set; }
+        [field: SerializeField] public InputActionReference Position { get; private set; }
 
         public void Enable()
         {

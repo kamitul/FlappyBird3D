@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 namespace Logic
 {
     [DisallowMultipleComponent()]
-    public class Bootstrap : MonoBehaviour
+    public sealed class Bootstrap : MonoBehaviour
     {
         [SerializeField] private BootstrapUI bootstrapUI;
 
@@ -51,7 +51,7 @@ namespace Logic
             //REMOVE LATER
             await UniTask.Delay(1500);
 
-            await GameServices.GetService<AssetService>().Download();
+            await GameServices.GetService<OnlineAssetService>().Download();
             controller.UpdateProgress(1f);
 
             bootstrapUI.Close();

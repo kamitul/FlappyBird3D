@@ -2,7 +2,7 @@
 
 namespace Map
 {
-    public class TileController
+    public sealed class TileController
     {
         private readonly Payload payload;
 

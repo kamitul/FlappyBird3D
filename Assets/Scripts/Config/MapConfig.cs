@@ -3,11 +3,11 @@
 namespace Config
 {
     [CreateAssetMenu(fileName = nameof(MapConfig), menuName = "Map/Config")]
-    public class MapConfig : ScriptableObject
+    public sealed class MapConfig : ScriptableObject
     {
-        [SerializeField] public int MAX_VISIBILE_TILES = 5;
-        [SerializeField] public int OBSTACLES_PASSED_ACCELERATOR = 20;
-        [SerializeField] public int MAX_OBSTACLES = 2;
-        [SerializeField] public float[] ZLines;
+        [field: SerializeField] public int MAX_VISIBILE_TILES { get; private set; } = 5;
+        [field: SerializeField] public int OBSTACLES_PASSED_ACCELERATOR { get; private set; } = 20;
+        [field: SerializeField] public int MAX_OBSTACLES { get; private set; } = 2;
+        [field: SerializeField] public float[] ZLines { get; private set; }
     }
 }

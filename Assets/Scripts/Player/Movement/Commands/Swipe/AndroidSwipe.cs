@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace Player.Movement.Commands.Swipe
 {
-    public class AndroidSwipe : Command<AndroidSwipe.Payload>, ISwipe, IDisposable
+    public sealed class AndroidSwipe : Command<AndroidSwipe.Payload>, ISwipe, IDisposable
     {
         private Vector2 initialPosition;
         private Vector2 delta;

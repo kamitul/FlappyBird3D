@@ -6,17 +6,10 @@ using UnityEngine;
 
 namespace Player
 {
-    public enum State
-    {
-        Start,
-        Flying,
-        Dead
-    }
-
     [DisallowMultipleComponent()]
     [RequireComponent(typeof(PlayerAnimationController))]
     [RequireComponent(typeof(PlayerMovementController))]
-    public class PlayerController : StateMachine<State>
+    public sealed class PlayerController : StateMachine<State>
     {
         private PlayerAnimationController animationController;
         private PlayerMovementController movementController;

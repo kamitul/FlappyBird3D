@@ -1,6 +1,6 @@
 ﻿namespace Constants
 {
-    public class Constant
+    public static class Constant
     {
         public const string ADDRESSABLE_CONFIG_LABEL = "config";
         public const string ADDRESSABLE_TILE_LABEL = "tile";
