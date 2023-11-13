@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25724d17ba4732f499578115159c4e89, type: 3}
   m_Name: MapConfig
   m_EditorClassIdentifier: 
-  MAX_VISIBILE_TILES: 5
-  OBSTACLES_PASSED_ACCELERATOR: 10
-  MAX_OBSTACLES: 2
-  ZLines:
-  - -2.5
+  <MAX_VISIBILE_TILES>k__BackingField: 5
+  <OBSTACLES_PASSED_ACCELERATOR>k__BackingField: 20
+  <MAX_OBSTACLES>k__BackingField: 2
+  <ZLines>k__BackingField:
+  - -2
   - 0
-  - 2.5
+  - 2

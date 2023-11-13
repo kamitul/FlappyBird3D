@@ -30,7 +30,12 @@ namespace Spawner.Factories.Obstacles
             var pos = tile.GetPosition();
             var ext = tile.GetObstacleArea();
 
-            int random = Random.Range(0, payload.Lines.Length - 1);
+            if (payload.Lines.Length <= 0)
+            {
+                return Vector3.zero;
+            }
+
+            int random = Random.Range(0, payload.Lines.Length);
             return new Vector3(Random.Range(pos.x - ext.x, pos.x + ext.x), 0f, payload.Lines[random]);
         }
 
